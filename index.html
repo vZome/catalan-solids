@@ -1,7 +1,104 @@
-<!DOCTYPE  html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:type" content="website"/>
+
+  <title>Arcimedean Solids</title>
+  <meta property="og:site_name"  content="Archimedean Solids"/>
+  <meta property="og:title"      content="Archimedean Solids"/>
+  <meta property="twitter:title" content="Archimedean Solids"/>
+
+  <meta name="description"             content="vZome 3D models of the Archimedean solids"/>
+  <meta property="og:description"      content="vZome 3D models of the Archimedean solids"/>
+  <meta property="twitter:description" content="vZome 3D models of the Archimedean solids"/>
+
+  <meta name="keywords" content="geometry,zome,vzome,Archimedean solids"/>
+  
+  <meta property="og:image"  content="/archimedean-solids/card-image.png"/>
+  <meta name="twitter:image" content="/archimedean-solids/card-image.png"/>
+<!--Exclude this metadata for now 
+  <meta property="og:url" content="https://vzome.github.io/johnson-solids/"/>
+  <link rel="canonical"      href="https://vzome.github.io/johnson-solids/">
+  <link rel="shortcut icon" type="image/x-icon" href="/johnson-solids/favicon.ico">
+ --> 
+  <!-- Enable the vzome-viewer custom element -->
+  <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
+
+  <!-- populate the table and hook the click events -->
+  <script type="module" src="./johnson-solids-listing.js" ></script>
+
+  <link href="style.css" rel="stylesheet">
+</head>
 <body>
-<h1>Hello vZome associates</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="main-grid">
+    <div class="intro">
+      <h1>
+        Archimedean Solids Explorer
+      </h1>
+      <div class="intro-text">
+        <p>
+          Select a row in the table to view that Archimedean solid.<br> 
+          For <a href="https://www.zometool.com" target="_blank" rel="noopener">Zometool</a>-constructible solids highlighted in blue,
+          check the box in the viewer to show struts and balls.
+        </p>
+        <p>
+          Use your mouse to manipulate the 3D view: left button to rotate, right button to pan, and scroll gesture to zoom.
+        </p>
+      </div>
+    </div>
+
+    <div class="table">
+      <table id="partsTable">
+        <thead>
+          <tr>
+            <th class="ident">Id</th>
+            <th class="tite">Name</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="viewer">
+      <h1 class="label">
+          <div id="index"></div>
+      </h1>
+      <div id="zome-switch">
+        <label id="labelForShowEdges"" for="showEdges"></label>
+        <input type="checkbox" id="showEdges">
+      </div>
+      <vzome-viewer id="viewer" reactive="false" show-perspective="false"/>
+    </div>
+																																				 
+<!-- Omit until corrected																																	 
+    <div class="references">
+      <h2>
+        References
+      </h2>													 
+      <ul>
+        <li><a href="https://discord.com/channels/808488427400986724/1176604061294936114" target="_blank"
+            rel="noopener">Discord discussion</a></li>
+        <li><a href="https://github.com/vZome/johnson-solids/" target="_blank" rel="noopener">GitHub source</a></li>
+        <li><a href="https://vzome.com" target="_blank" rel="noopener">vZome</a></li>
+        <li><a href="https://www.qfbox.info/4d/johnson" target="_blank" rel="noopener">More Polyhedra</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Johnson_solid" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_Johnson_solids" target="_blank" rel="noopener">Wikipedia
+            (list)</a></li>
+      </ul>
+
+    </div>
+  </div>
+-->
+																																																				 
+  <div class="download">
+    <p>
+      <a id="download" target="_blank" rel="noopener" href="" download="">Download .shapes.json</a>
+    </p> 
+  </div>
+  
 </body>
-<html>
+</html>
