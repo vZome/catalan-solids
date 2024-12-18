@@ -1,0 +1,273 @@
+
+:root {
+  --color-todo: rgb(255, 242, 242);
+
+  --color-ident: rgb(175, 200, 220); /* same as vZome default background */
+  --color-ident-selected: rgb(87, 100, 110); /* each RGB channel is 1/2 of unselected value */
+  
+  --color-text: rgb(127, 127, 127);
+  --color-text-selected: rgb(240, 240, 240);
+  --color-text-selected-dark: rgb(15, 15, 15);
+
+  --color-blu-strut: rgb(0, 118, 149);
+  --color-yel-strut: rgb(240, 160, 0);
+  --color-red-strut: rgb(175, 0, 0);
+  --color-grn-strut: rgb(0, 141, 54);
+
+  --color-blu-panel: rgb(127, 186, 202);
+  --color-yel-panel: rgb(247, 207, 127);
+  --color-red-panel: rgb(215, 127, 127);
+  --color-grn-panel: rgb(127, 198, 154);
+
+  --checbox-scale: 1.75;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; /* This is essential to avoid a small white border around the whole main div. */
+  user-select: none;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 29.2rem minmax( 0, 1fr );
+  grid-template-rows: min-content minmax( 0, 1fr );
+  grid-template-areas:
+    "intro intro refs"
+    "table viewer viewer";
+  gap: 7px;
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.intro {
+  margin-inline-start: 2rem;
+  grid-area: intro;
+  max-width: 800px;
+}
+
+.references {
+  grid-area: refs;
+  min-width: 320px;
+}
+
+.viewer {
+  position: relative;
+  grid-area: viewer;
+  width: 100%;
+}
+
+#viewer {
+  width: 99%;
+  height: 99%;
+}
+
+.label {
+  cursor: default; /* disable the "I-beam" text cursor */
+  position: absolute;
+  z-index: 300;
+  top: 0.3rem;
+  left: 2rem;
+}
+
+.table {
+  grid-area: table; /* added for the grid above */
+  overflow: auto;
+  margin-block-end: 8px;
+  margin-inline-start: 8px;
+}
+
+#zome-switch {
+  cursor: default; /* disable the "I-beam" text cursor */
+  position: absolute;
+  z-index: 300;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 14px; /* Same as perspective switch, even though it's hidden */
+}
+
+input[type=checkbox]
+{
+  /* Resized Checkboxes */
+  /* See other approaches at https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css */
+  -ms-transform: scale(var(--checbox-scale)); /* IE */
+  -moz-transform: scale(var(--checbox-scale)); /* FF */
+  -webkit-transform: scale(var(--checbox-scale)); /* Safari and Chrome */
+  -o-transform: scale(var(--checbox-scale)); /* Opera */
+  transform: scale(var(--checbox-scale));
+  padding: 2px;
+}
+
+#showEdges {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#download {
+  display: none;
+}
+
+.no-zome {
+  display: none;
+}
+
+.zome {
+  display: flex;
+}
+
+/*
+  This CSS originally copied largely as-is from:
+
+      https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+*/
+
+/* spacing */
+
+table {
+  border-collapse: collapse;
+  cursor: default; /* disable the "I-beam" text cursor */
+  table-layout: fixed;
+  width: 100%;
+}
+
+thead th:nth-child(1)   /* id column */
+{
+  text-align: center;
+  width: 4ch;
+}
+tbody td:nth-child(1)   /* id column */
+{
+  text-align: right;
+}
+
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 3px;
+  white-space: nowrap;
+}
+
+th.ident, td.done {
+  background-color: var(--color-ident);
+  font-weight: bold;
+}
+
+th.ident, td.ident {
+  width: 45ch; /* J77 and J78 have 45 characters in their names. No others are longer. */
+}
+
+td.todo {
+  background-color: var(--color-todo);
+  font-style: italic;
+}
+
+td.title {
+  background-color: var(--color-yel-panel);
+}
+tr.selected > td:last-child.title {
+  background-color: var(--color-yel-strut);
+}
+
+td.title.zometool {
+  background-color: var(--color-blu-panel);
+  font-style: italic;
+  font-weight: bold;
+}
+tr.selected > td:last-child.title.zometool {
+  background-color: var(--color-blu-strut);
+  font-style: italic;
+  font-weight: bold;
+}
+
+th
+{
+  background-color: whitesmoke;
+}
+
+/* selected table row */
+
+tr.selected,
+tr.selected td {
+  border: 1px solid black;
+  color: var(--color-text-selected);
+  font-weight: bold;
+}
+
+tr.selected td.done {
+  background-color: var(--color-ident-selected)
+}
+
+/* typography */
+
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+thead, tbody {
+  text-align: left;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+/* graphics and colors */
+
+thead,
+tfoot {
+  /* position:fixed; */
+  background: whitesmoke;
+}
+
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+@media ( max-aspect-ratio: 12/10 ) {
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content minmax( 0, 5fr ) minmax( 0, 3fr );
+    grid-template-areas:
+      "intro"
+      "viewer"
+      "table";
+    height: 100vh;
+    margin: auto;
+  }
+
+  .intro h1 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.37em;
+    margin-block-end: 0.2em;
+    font-weight: bold;
+}
+  .intro {
+    grid-area: intro;
+  }
+  
+  .intro-text,
+  .references {
+    display: none;
+  }
+  
+}
