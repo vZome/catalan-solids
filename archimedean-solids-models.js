@@ -10,7 +10,7 @@ export const models = [
   { id:9 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosahedron", url:""},
   { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:""},
   { id:11 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosidodecahedron", url:""},
-  { id:12 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub cube", url:""},
+  { id:12 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub cube", url:"uploads/ThynStyx/Snub-field-Dextro-Snub-cube.vZome"},
   { id:13 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub dodecahedron", url:""},
   { id:14 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub cude", url:""},
   { id:15 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub dodecahedron", url:""},
