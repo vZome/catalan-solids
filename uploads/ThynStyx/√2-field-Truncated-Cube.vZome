@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="rootTwo" version="7.1">
-  <EditHistory editNumber="222" lastStickyEdit="222">
+  <EditHistory editNumber="234" lastStickyEdit="234">
     <StrutCreation anchor="0 0 0 0 0 0" index="0" len="0 4" symm="octahedral"/>
     <StrutCreation anchor="0 4 0 0 0 0" index="7" len="0 4" symm="octahedral"/>
     <StrutCreation anchor="0 4 0 0 0 0" dir="brown" index="9" len="2 0" symm="octahedral"/>
@@ -219,25 +219,41 @@
     <SelectAll originLast="true"/>
     <ConvexHull3d mode="onlyPanels"/>
     <InvertSelection/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="1"/>
+    <Snapshot id="2"/>
+    <SelectAll originLast="true"/>
+    <PanelPerimeters/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <EndBlock/>
+    <BookmarkTool name="tool-1"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-1" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="3"/>
   </EditHistory>
   <notes>
-    <page snapshot="0" title="Skeleton view">
-      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="true" stereoAngle="0.0" width="48.92906951904297">
+    <page snapshot="2" title="Faces">
+      <ViewModel distance="71.44154357910156" far="142.88304138183594" near="0.1786039173603058" parallel="true" stereoAngle="0.0" width="32.148685455322266">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.40824830532073975" y="0.40824830532073975" z="0.8164966106414795"/>
-        <LookDirection x="0.5773502588272095" y="0.5773502588272095" z="-0.5773502588272095"/>
+        <UpDirection x="0.27669665217399597" y="0.9542871117591858" z="-0.11302825808525085"/>
+        <LookDirection x="0.4832984209060669" y="-0.23985619843006134" z="-0.8419568538665771"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="1" title="Panel view">
-      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="true" stereoAngle="0.0" width="48.92906951904297">
+    <page snapshot="3" title="Edges">
+      <ViewModel distance="71.44154357910156" far="142.88304138183594" near="0.1786039173603058" parallel="true" stereoAngle="0.0" width="32.148685455322266">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.40824830532073975" y="0.40824830532073975" z="0.8164966106414795"/>
-        <LookDirection x="0.5773502588272095" y="0.5773502588272095" z="-0.5773502588272095"/>
+        <UpDirection x="0.27669665217399597" y="0.9542871117591858" z="-0.11302825808525085"/>
+        <LookDirection x="0.4832984209060669" y="-0.23985619843006134" z="-0.8419568538665771"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
@@ -248,10 +264,10 @@
     <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
   </sceneModel>
   <Viewing>
-    <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="true" stereoAngle="0.0" width="48.92906951904297">
+    <ViewModel distance="71.44154357910156" far="142.88304138183594" near="0.1786039173603058" parallel="true" stereoAngle="0.0" width="32.148685455322266">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.40824830532073975" y="0.40824830532073975" z="0.8164966106414795"/>
-      <LookDirection x="0.5773502588272095" y="0.5773502588272095" z="-0.5773502588272095"/>
+      <UpDirection x="0.238315150141716" y="0.9630017876625061" z="-0.12583661079406738"/>
+      <LookDirection x="0.3535231947898865" y="-0.2066982239484787" z="-0.9123028516769409"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="octahedral" renderingStyle="small octahedra">
@@ -270,5 +286,6 @@
   </OtherSymmetries>
   <Tools>
     <Tool copyColors="true" deleteInputs="true" id="tool-0" label="translation 0" selectInputs="false"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-1" label="Faces" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
