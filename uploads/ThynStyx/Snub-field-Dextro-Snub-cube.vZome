@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="snubCube" version="7.1">
-  <EditHistory editNumber="620" lastStickyEdit="619">
+  <EditHistory editNumber="621" lastStickyEdit="621">
     <StrutCreation anchor="0 0 0 0 0 0 0 0 0" dir="snubVertex" index="5" len="1 1 1" symm="octahedral"/>
     <BeginBlock/>
     <SelectManifestation endSegment="0 0 1 1 1 1 0 -1 0" startSegment="0 0 0 0 0 0 0 0 0"/>
@@ -1172,21 +1172,22 @@
     <EndBlock/>
     <BookmarkTool name="tool-4"/>
     <Delete/>
+    <Snapshot id="2"/>
   </EditHistory>
   <notes>
-    <page snapshot="1" title="Faces">
+    <page snapshot="2" title="Faces">
       <ViewModel distance="71.44154357910156" far="142.88258361816406" near="0.17860376834869385" parallel="true" stereoAngle="0.0" width="32.1486701965332">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.07117117196321487" y="0.9469563961029053" z="-0.313385009765625"/>
-        <LookDirection x="0.10899987071752548" y="-0.3196832537651062" z="-0.9412339329719543"/>
+        <UpDirection x="0.019745593890547752" y="0.9276760220527649" z="-0.3728674054145813"/>
+        <LookDirection x="-0.050039734691381454" y="-0.3715551197528839" z="-0.9270608425140381"/>
       </ViewModel>
-      <content xml:space="preserve">Dextro Panels</content>
+      <content xml:space="preserve"/>
     </page>
     <page snapshot="0" title="Edges">
       <ViewModel distance="71.44154357910156" far="142.88258361816406" near="0.17860376834869385" parallel="true" stereoAngle="0.0" width="32.1486701965332">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.03435217961668968" y="0.9992703199386597" z="-0.01675398275256157"/>
-        <LookDirection x="-0.010332168079912663" y="-0.016407720744609833" z="-0.9998119473457336"/>
+        <UpDirection x="0.019745593890547752" y="0.9276760220527649" z="-0.3728674054145813"/>
+        <LookDirection x="-0.050039734691381454" y="-0.3715551197528839" z="-0.9270608425140381"/>
       </ViewModel>
       <content xml:space="preserve">Dextro Snub cube skeleton</content>
     </page>
@@ -1199,8 +1200,8 @@
   <Viewing>
     <ViewModel distance="71.44154357910156" far="142.88258361816406" near="0.17860376834869385" parallel="true" stereoAngle="0.0" width="32.1486701965332">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.03435217961668968" y="0.9992703199386597" z="-0.01675398275256157"/>
-      <LookDirection x="-0.010332168079912663" y="-0.016407720744609833" z="-0.9998119473457336"/>
+      <UpDirection x="0.019745593890547752" y="0.9276760220527649" z="-0.3728674054145813"/>
+      <LookDirection x="-0.050039734691381454" y="-0.3715551197528839" z="-0.9270608425140381"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="octahedral" renderingStyle="octahedra">
