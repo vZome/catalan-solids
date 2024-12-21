@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="71" field="golden" version="7.1">
-  <EditHistory editNumber="356" lastStickyEdit="356">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="golden" version="7.1">
+  <EditHistory editNumber="382" lastStickyEdit="382">
     <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="41" len="2 2"/>
     <StrutCreation anchor="-1 -2 0 -1 1 3" dir="green" index="51" len="2 2"/>
     <BeginBlock/>
@@ -183,21 +183,27 @@
     <SelectManifestation point="1 2 0 1 -1 -3"/>
     <SelectManifestation point="1 3 -1 -2 0 -1"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 -1 -1 0 -2 -3"/>
     <SelectManifestation point="-1 0 -2 -3 -1 -1"/>
     <SelectManifestation point="-2 -3 -1 -1 -1 0"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 -1 -1 0 -2 -3"/>
     <SelectManifestation point="0 -1 1 3 -1 -2"/>
     <SelectManifestation point="1 2 0 1 -1 -3"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation endSegment="-1 -1 -1 0 -2 -3" startSegment="-1 0 -2 -3 -1 -1"/>
@@ -244,14 +250,18 @@
     <SelectManifestation point="1 0 2 3 1 1"/>
     <SelectManifestation point="0 -1 1 3 -1 -2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="1 3 -1 -2 0 -1"/>
     <SelectManifestation point="2 3 1 1 1 0"/>
     <SelectManifestation point="1 2 0 1 -1 -3"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 -1 -1 0 -2 -3"/>
@@ -259,21 +269,27 @@
     <SelectManifestation point="-1 -3 1 2 0 1"/>
     <SelectManifestation point="0 -1 1 3 -1 -2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 -2 0 -1 1 3"/>
     <SelectManifestation point="-1 -3 1 2 0 1"/>
     <SelectManifestation point="-2 -3 -1 -1 -1 0"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="1 0 2 3 1 1"/>
     <SelectManifestation point="-1 -3 1 2 0 1"/>
     <SelectManifestation point="0 -1 1 3 -1 -2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 0 -2 -3 -1 -1"/>
@@ -281,14 +297,18 @@
     <SelectManifestation point="-1 -2 0 -1 1 3"/>
     <SelectManifestation point="-2 -3 -1 -1 -1 0"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="-1 0 -2 -3 -1 -1"/>
     <SelectManifestation point="1 3 -1 -2 0 -1"/>
     <SelectManifestation point="0 1 -1 -3 1 2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="0 1 -1 -3 1 2"/>
@@ -312,7 +332,9 @@
     <SelectManifestation point="1 1 1 0 2 3"/>
     <SelectManifestation point="-1 -2 0 -1 1 3"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="0 1 -1 -3 1 2"/>
@@ -320,14 +342,18 @@
     <SelectManifestation point="2 3 1 1 1 0"/>
     <SelectManifestation point="1 1 1 0 2 3"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="1 1 1 0 2 3"/>
     <SelectManifestation point="1 0 2 3 1 1"/>
     <SelectManifestation point="2 3 1 1 1 0"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="1 1 1 0 2 3"/>
@@ -365,7 +391,9 @@
     <SelectManifestation point="-1 -3 1 2 0 1"/>
     <SelectManifestation point="1 0 2 3 1 1"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation endSegment="1 1 1 0 2 3" startSegment="0 1 -1 -3 1 2"/>
@@ -464,21 +492,47 @@
     <EndBlock/>
     <Delete/>
     <Snapshot id="2"/>
+    <SelectManifestation endSegment="-1 -1 -1 0 -2 -3" startSegment="0 -1 1 3 -1 -2"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <ShowVertices/>
+    <PanelPerimeters/>
+    <SelectAll originLast="true"/>
+    <PanelPerimeters/>
+    <BookmarkTool name="tool-2"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <EndBlock/>
+    <Hide/>
+    <Snapshot id="3"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <Delete/>
+    <Snapshot id="4"/>
+    <ShowHidden/>
+    <InvertSelection/>
+    <Delete/>
+    <Snapshot id="5"/>
+    <Snapshot id="6"/>
   </EditHistory>
   <notes>
-    <page snapshot="0" title="Edges">
-      <ViewModel distance="87.2588882446289" far="174.5177764892578" near="0.21814726293087006" parallel="false" stereoAngle="0.0" width="39.26649475097656">
+    <page snapshot="6" title="Faces">
+      <ViewModel distance="71.44154357910156" far="142.88308715820312" near="0.1786039024591446" parallel="true" stereoAngle="0.0" width="32.1486930847168">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.43799740076065063" y="-0.19954881072044373" z="-0.8765497803688049"/>
-        <LookDirection x="0.7966984510421753" y="-0.3655359745025635" z="0.48130813241004944"/>
+        <UpDirection x="0.04722411558032036" y="0.9710368514060974" z="-0.23421630263328552"/>
+        <LookDirection x="0.5720614194869995" y="-0.2185080200433731" z="-0.7905694246292114"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="1" title="Faces">
-      <ViewModel distance="87.2588882446289" far="174.5177764892578" near="0.21814726293087006" parallel="false" stereoAngle="0.0" width="39.26649475097656">
+    <page snapshot="4" title="Edges">
+      <ViewModel distance="71.44154357910156" far="142.88308715820312" near="0.1786039024591446" parallel="true" stereoAngle="0.0" width="32.1486930847168">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="-0.8137602806091309" y="-0.5217577815055847" z="0.2560538351535797"/>
-        <LookDirection x="-0.4029039442539215" y="0.18889543414115906" z="-0.8955380916595459"/>
+        <UpDirection x="0.04722411558032036" y="0.9710368514060974" z="-0.23421630263328552"/>
+        <LookDirection x="0.5720614194869995" y="-0.2185080200433731" z="-0.7905694246292114"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
@@ -491,8 +545,8 @@
   <Viewing>
     <ViewModel distance="87.2588882446289" far="174.5177764892578" near="0.21814726293087006" parallel="false" stereoAngle="0.0" width="39.26649475097656">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.8399499654769897" y="-0.4713352620601654" z="0.26893872022628784"/>
-      <LookDirection x="-0.26637008786201477" y="0.07366994023323059" z="0.961052656173706"/>
+      <UpDirection x="0.8796101212501526" y="0.21476469933986664" z="0.42445600032806396"/>
+      <LookDirection x="-0.471833199262619" y="0.28046077489852905" z="0.8358930945396423"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
@@ -535,5 +589,6 @@
   <Tools>
     <Tool copyColors="false" deleteInputs="false" id="tool-0" label="line reflection 0" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="true" id="tool-1" label="translation 1" selectInputs="false"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-2" label="Edges" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
