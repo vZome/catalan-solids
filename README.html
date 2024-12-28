@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.5">
+	<title>Making Archimedean Solids with vZome</title>
+	<meta name="description" content="A collection of the Archimedean solids, using vZome technology"/>
+	<meta name="keywords" content="geometry,zome,vzome,Archimedean solids"/>
+	<style>
+table {
+  border-collapse: collapse;
+  cursor: default; /* disable the "I-beam" text cursor */
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 5px;
+  white-space: nowrap;
+}
+	</style>
+</head>
+<body>
+	<h1>
+		A collection of the <a href="./?ready=1">Archimedean Solids</a> using <a href="https://vzome.com" target="_blank" rel="noopener">vZome</a> technology
+	</h1>    
+	<h2>
+		Guidelines for contributing vZome models
+	</h2> 
+	<p>
+	 Git users may fork the "archimedean-solids" <a href="https://github.com/ThynStyx/archinedean-solids/" target="_blank" rel="noopener">GitHub repo</a>
+		directly and submit Pull Requests (PR's) directly from branches in their own fork.
+	</p>
+	<p>
+		As a general rule, all vZome files should:
+		<ol>
+			<li>Use the simplest (lowest order) algebraic field in which the model can be generated.</li>
+			<li>Have an edge length equal to the default blue or green strut in the applicable field and symmetry system. (e.g. B1 or G1)
+				The Root2 field is an exception. In the Root2 field, octahedral symmetry should be used 
+				and the strut length should equal "long blue" which also equals "long green".
+			</li>
+			<li>Retain the default vZome background color.</li>
+			<li>Either have the default scene contain only panels forming the Archimedean solid 
+				or else capture a scene containing only panels forming the Archimedean solid. Name the scene "Faces".
+			</li>
+			<li>Have the centroid  located at the origin.</li>
+			<li>Include the name(s) of the Archimedean solid(s) in the file name.</li>
+			<li>Include a corresponding .shapes.json file. This happens automatically when the model is published directly from vZome desktop.</li>
+		</ol>
+		<a href="https://www.zometool.com" target="_blank" rel="noopener">Zometool</a> constructible models should comply with these additional guidelines:
+		<ol>
+			<li>Use the golden field where possible</li>
+			<li>Use icosahedral symmetry with lifelike shapes for the default scene.</li>
+			<li>Capture a scene containing only balls and struts forming the edges of the Johnson solid. Name the scene "Edges".</li>
+			<li>Note that "lifelike shapes" must be visible in the main model at the time the "Edges" scene is captured, not just when saving the finished model.</li>
+			<li>Retain the default strut and panel colors to correspond with the color criteria below.</li>
+		</ol>
+		<ul>
+			<li>Note that field names, file names and scene names are all case sensitive in archimedean-solids-models.js 
+				and that appropriate values are required for the field, edgescene, facescene, zometool and url attributes in archimedean-solids-models.js 
+				in order to incorporate any models into the collection. (See existing examples)</li>
+		</ul>
+	</p>
+	<p>
+		Each scene must have a unique name. No scene should be named "default scene" since that is reserved for the main model.
+	</p>
+	<h3>Colors</h3> 
+	<p>
+		All struts should retain their default vZome colors since they are only shown when the models are zometool constructible
+		in which case, they will thereby match the actual zometool strut colors.<br>
+		Panels should use a common coloring scheme for all models, based on the default vZome strut colors in icosahedral symmetry.<br>
+		The following colors should be used for the corresponding types of faces regardless of the field in which it is built.
+		<table>
+			<tr><td> Triangles </td><td> Yellow </td><td> rgb( 240, 160,   0 ) </td></tr>
+			<tr><td> Squares   </td><td> Blue   </td><td> rgb(   0, 118, 149 ) </td></tr>
+			<tr><td> Pentagons </td><td> Red    </td><td> rgb( 175,   0,   0 ) </td></tr>
+			<tr><td> Hexagons  </td><td> Green  </td><td> rgb(   0, 141,  45 ) </td></tr>
+			<tr><td> Octagons  </td><td> Orange </td><td> rgb( 220,  76,   0 ) </td></tr>
+			<tr><td> Decagons  </td><td> Purple </td><td> rgb( 108,   0, 198 ) </td></tr>
+		</table>
+	</p>
+	<p>
+		Some of these criteria are necessary for proper operation of the site. Others are just conventions and preferences 
+		based on our discussions on Discord. 
+		Feel free to post suggestions and questions regarding this site on <a href="https://discord.com/channels/808488427400986724/1176604061294936114" 
+			target="_blank" rel="noopener">Discord</a>.
+	</p>
+	<h2>
+		References
+	</h2> 
+	<p>
+		Join us on <a href="https://discord.com/channels/808488427400986724/1176604061294936114" 
+			target="_blank" rel="noopener">Discord</a>
+	</p>  
+</body>
+</html>
