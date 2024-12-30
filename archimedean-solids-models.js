@@ -8,7 +8,7 @@ export const models = [
   { id:7 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Icosidodecahedron", url:"uploads/ThynStyx/Golden-Icosidodecahedron.vZome"},
   { id:8 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated dodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Dodecahedron.vZome"},
   { id:9 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosahedron", url:""},
-  { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:""},
+  { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:"uploads/ThynStyx/Golden-Rhombicosidodecahedron.vZome"},
   { id:11 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosidodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron.vZome"},
   { id:12 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub cube", url:"uploads/ThynStyx/Snub-field-Dextro-Snub-cube.vZome"},
   { id:13 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub dodecahedron", url:""},
