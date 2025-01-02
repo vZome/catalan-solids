@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="golden" version="7.1">
-  <EditHistory editNumber="339" lastStickyEdit="339">
+  <EditHistory editNumber="382" lastStickyEdit="382">
     <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="41" len="2 2"/>
     <StrutCreation anchor="-1 -2 0 -1 1 3" dir="green" index="51" len="2 2"/>
     <BeginBlock/>
@@ -459,21 +459,78 @@
     </Hide>
     <Snapshot id="1"/>
     <Snapshot id="2"/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="2 3 1 2 0 -2"/>
+      <polygonVertex at="1 3 -1 -1 -1 -3"/>
+      <polygonVertex at="-1 0 -2 -2 -2 -3"/>
+      <polygonVertex at="-2 -3 -1 0 -2 -2"/>
+      <polygonVertex at="-1 -3 1 3 -1 -1"/>
+      <polygonVertex at="1 0 2 4 0 -1"/>
+    </SelectManifestation>
+    <DeselectAll/>
+    <EndBlock/>
+    <Snapshot id="3"/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <BookmarkTool name="tool-4"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="2 3 1 2 0 -2"/>
+      <polygonVertex at="1 0 2 4 0 -1"/>
+      <polygonVertex at="0 -2 2 3 1 2"/>
+      <polygonVertex at="0 -1 1 0 2 4"/>
+      <polygonVertex at="1 2 0 -2 2 3"/>
+      <polygonVertex at="2 4 0 -1 1 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <PanelPerimeters/>
+    <BookmarkTool name="tool-5"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="4"/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="5"/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="6"/>
   </EditHistory>
   <notes>
-    <page snapshot="2" title="Faces">
-      <ViewModel distance="71.44154357910156" far="142.88308715820312" near="0.1786038726568222" parallel="false" stereoAngle="0.0" width="32.14868927001953">
+    <page snapshot="5" title="Edges">
+      <ViewModel distance="78.95510864257812" far="157.91021728515625" near="0.19738781452178955" parallel="true" stereoAngle="0.0" width="35.52979278564453">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="-0.4309699833393097" y="-0.7956888675689697" z="-0.4256017804145813"/>
-        <LookDirection x="0.16253234446048737" y="-0.53239506483078" z="0.8307456970214844"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="0" title="Edges">
-      <ViewModel distance="71.44154357910156" far="142.88308715820312" near="0.1786038726568222" parallel="false" stereoAngle="0.0" width="32.14868927001953">
+    <page snapshot="6" title="Faces">
+      <ViewModel distance="78.95510864257812" far="157.91021728515625" near="0.19738781452178955" parallel="true" stereoAngle="0.0" width="35.52979278564453">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="-0.4309699833393097" y="-0.7956888675689697" z="-0.4256017804145813"/>
-        <LookDirection x="0.16253234446048737" y="-0.53239506483078" z="0.8307456970214844"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
@@ -532,5 +589,7 @@
     <Tool copyColors="true" deleteInputs="true" id="tool-1" label="translation 1" selectInputs="false"/>
     <Tool copyColors="false" deleteInputs="false" id="tool-2" label="line reflection 2" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="true" id="tool-3" label="translation 3" selectInputs="false"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-4" label="Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-5" label="Edges" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
