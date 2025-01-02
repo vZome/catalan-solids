@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="golden" version="7.1">
-  <EditHistory editNumber="382" lastStickyEdit="382">
+  <EditHistory editNumber="384" lastStickyEdit="382">
     <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="41" len="2 2"/>
     <StrutCreation anchor="-1 -2 0 -1 1 3" dir="green" index="51" len="2 2"/>
     <BeginBlock/>
@@ -516,9 +516,11 @@
     <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
     <Delete/>
     <Snapshot id="6"/>
+    <SelectManifestation point="0 -2 2 3 1 2"/>
+    <DeselectAll/>
   </EditHistory>
   <notes>
-    <page snapshot="5" title="Edges">
+    <page snapshot="5" title="Faces">
       <ViewModel distance="78.95510864257812" far="157.91021728515625" near="0.19738781452178955" parallel="true" stereoAngle="0.0" width="35.52979278564453">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -526,7 +528,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="6" title="Faces">
+    <page snapshot="6" title="Edges">
       <ViewModel distance="78.95510864257812" far="157.91021728515625" near="0.19738781452178955" parallel="true" stereoAngle="0.0" width="35.52979278564453">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
