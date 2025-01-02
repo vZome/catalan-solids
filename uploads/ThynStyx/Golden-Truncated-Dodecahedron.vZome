@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="76" field="golden" version="7.1">
-  <EditHistory editNumber="485" lastStickyEdit="480">
+  <EditHistory editNumber="491" lastStickyEdit="491">
     <StrutCreation anchor="0 0 0 0 0 0" index="0" len="2 2"/>
     <StrutCreation anchor="2 2 0 0 0 0" index="8" len="2 2"/>
     <StrutCreation anchor="3 4 0 -1 1 1" index="2" len="2 2"/>
@@ -488,9 +488,31 @@
     <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
     <Delete/>
+    <Snapshot id="2"/>
+    <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-2" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="3"/>
   </EditHistory>
   <notes>
-    <page snapshot="0" title="Faces">
+    <page snapshot="2" title="Faces">
+      <ViewModel distance="141.01686096191406" far="282.0338134765625" near="0.35254213213920593" parallel="true" stereoAngle="0.0" width="63.45759582519531">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="3" title="Edges">
+      <ViewModel distance="141.01686096191406" far="282.0338134765625" near="0.35254213213920593" parallel="true" stereoAngle="0.0" width="63.45759582519531">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="0" title="">
       <ViewModel distance="141.01686096191406" far="282.0338134765625" near="0.35254213213920593" parallel="true" stereoAngle="0.0" width="63.45759582519531">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="-0.6549442410469055" y="-0.32328370213508606" z="-0.6830335855484009"/>
@@ -498,7 +520,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="1" title="Edges">
+    <page snapshot="1" title="">
       <ViewModel distance="141.01686096191406" far="282.0338134765625" near="0.35254213213920593" parallel="true" stereoAngle="0.0" width="63.45759582519531">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="-0.6549442410469055" y="-0.32328370213508606" z="-0.6830335855484009"/>
@@ -515,8 +537,8 @@
   <Viewing>
     <ViewModel distance="141.01686096191406" far="282.0338134765625" near="0.35254213213920593" parallel="true" stereoAngle="0.0" width="63.45759582519531">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="-0.6549442410469055" y="-0.32328370213508606" z="-0.6830335855484009"/>
-      <LookDirection x="-0.18485811352729797" y="0.9449491500854492" z="-0.2699938416481018"/>
+      <UpDirection x="0.0" y="1.0" z="0.0"/>
+      <LookDirection x="0.0" y="0.0" z="-1.0"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="icosahedral" renderingStyle="lifelike">
