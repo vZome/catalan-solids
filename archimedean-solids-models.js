@@ -7,7 +7,7 @@ export const models = [
   { id:6 , field:"Root2",edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Truncated cuboctahedron", url:"uploads/ThynStyx/√2-Truncated-Cuboctahedron.vZome"},
   { id:7 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Icosidodecahedron", url:"uploads/ThynStyx/Golden-Icosidodecahedron.vZome"},
   { id:8 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated dodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Dodecahedron.vZome"},
-  { id:9 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosahedron", url:""},
+  { id:9 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosahedron-playful-ONLINE.vZome"},
   { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:"uploads/ThynStyx/Golden-Rhombicosidodecahedron-SV.vZome"},
   { id:11 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosidodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron-ONLINE.vZome"},
   { id:12 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub cube", url:"uploads/ThynStyx/Snub-field-Dextro-Snub-cube.vZome"},
