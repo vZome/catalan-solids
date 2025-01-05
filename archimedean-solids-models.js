@@ -11,7 +11,7 @@ export const models = [
   { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:"uploads/ThynStyx/Golden-Rhombicosidodecahedron-SV.vZome"},
   { id:11 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosidodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron-ONLINE.vZome"},
   { id:12 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub cube", url:"uploads/ThynStyx/Snub-field-Dextro-Snub-cube-ONLINE.vZome"},
-  { id:13 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub dodecahedron", url:"uploads/ThynStyx/Snub-dodec-dextro-jk.vZome"},
+  { id:13 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub dodecahedron", url:"uploads/ThynStyx/Snub-dodec-dextro-jk-ONLINE.vZome"},
   { id:14 , field:"snubCube", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub cube", url:"uploads/ThynStyx/Snub-field-Laevo-Snub-cube-ONLINE.vZome"},
-  { id:15 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub dodecahedron", url:"uploads/ThynStyx/snub-dodec-laevo-jk.vZome"},
+  { id:15 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub dodecahedron", url:"uploads/ThynStyx/snub-dodec-laevo-jk-ONLINE.vZome"},
   ]
