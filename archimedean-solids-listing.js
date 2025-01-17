@@ -366,7 +366,7 @@ function setScene( asolidSceneData ) {
   const { field, edgescene, facescene, zometool } = asolidSceneData;
   const isSnub = field.toLowerCase().startsWith("snubcube"); // TODO: Just use "snub" when we merge the snubDodec models
   const scene = (showAnyEdges || isSnub || (field == "Golden" && zometool == "true")) && showEdges.checked ? edgescene : facescene;
-  zomeSwitch.className = (showAnyEdges || (zometool == "true")) ? 'zome' : 'no-zome';
+  zomeSwitch.className = (showAnyEdges || isSnub || (zometool == "true")) ? 'zome' : 'no-zome';
   document.getElementById( "labelForShowEdges" ).textContent = "Show " + (showAnyEdges ? "Edges" : isSnub ? "Chiral" : "Zometool");
   viewer.scene = scene;
   viewer.update({ camera });
