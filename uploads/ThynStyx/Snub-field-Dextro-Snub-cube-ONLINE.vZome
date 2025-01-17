@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" edition="online" version="1.0" buildNumber="305" field="undefined">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" edition="online" version="1.0" buildNumber="305" field="snubCube">
   <EditHistory editNumber="649" lastStickyEdit="643">
     <StrutCreation anchor="0 0 0 0 0 0 0 0 0" symm="octahedral" dir="snubVertex" index="5" len="1 1 1"/>
     <BeginBlock/>
