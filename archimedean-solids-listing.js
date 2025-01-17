@@ -335,7 +335,7 @@ function fillRow(tr, asolid) {
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
-  td.innerHTML = "a" + id;
+  td.innerHTML = "A" + id;
   // title column
   td = tr.insertCell();
   td.className = "title";
