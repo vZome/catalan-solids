@@ -59,9 +59,13 @@ function downloadShapesJson() {
 }
 
 function postProcess(modelData) {
-	//recolor(modelData);
-	//rescale(modelData);
-	//standardizeCameras(modelData);
+	if(modelData.polygons != "true") {
+		alert("Model data is not in polygon JSON format. Post processing will be skipped.");
+	} else {
+		recolor(modelData);
+		rescale(modelData);
+		standardizeCameras(modelData);
+	}
 	return modelData;
 }
 
