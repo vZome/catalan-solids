@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="81" field="snubCube" version="7.1">
-  <EditHistory editNumber="10" lastStickyEdit="16">
+  <EditHistory editNumber="11" lastStickyEdit="17">
     <Branch>
       <StrutCreation anchor="0 0 0 0 0 0 0 0 0" index="0" len="1 1 1" symm="octahedral"/>
       <StrutCreation anchor="0 0 0 0 0 0 0 0 0" index="5" len="1 1 1" symm="octahedral"/>
@@ -12,6 +12,7 @@
     </Branch>
     <StrutCreation anchor="0 0 0 0 0 0 0 0 0" dir="snubVertex" index="4" len="1 1 1" symm="octahedral"/>
     <SelectManifestation endSegment="0 0 1 0 1 0 1 1 1" startSegment="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
     <Delete/>
     <SelectManifestation point="0 0 1 0 1 0 1 1 1"/>
     <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
