@@ -11,6 +11,5 @@ export const models = [
   { id:10 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Rhombicosidodecahedron", url:"uploads/ThynStyx/Golden-Rhombicosidodecahedron-SV.vZome"},
   { id:11 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated icosidodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron-ONLINE.vZome"},
   { id:12 , field:"snubCube", edgescene:"Dextro Faces", facescene:"Laevo Faces", zometool:"false", title:"Snub cube", url:"uploads/david-hall/SnubCubes.vZome"},
-  { id:13 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Dextro snub dodecahedron", url:"uploads/ThynStyx/Snub-dodec-dextro-jk-ONLINE.vZome"},
-  { id:14 , field:"snubDodec", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Laevo snub dodecahedron", url:"uploads/ThynStyx/snub-dodec-laevo-jk-ONLINE.vZome"},
+  { id:13 , field:"snubDodec", edgescene:"Dextro Faces", facescene:"Laevo Faces", zometool:"false", title:"Snub dodecahedron", url:"uploads/david-hall/SnubDodecs.vZome"},
   ]
