@@ -59,9 +59,9 @@ function downloadShapesJson() {
 }
 
 function postProcess(modelData) {
-	recolor(modelData);
-	rescale(modelData);
-	standardizeCameras(modelData);
+	//recolor(modelData);
+	//rescale(modelData);
+	//standardizeCameras(modelData);
 	return modelData;
 }
 
@@ -335,7 +335,7 @@ function fillRow(tr, asolid) {
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
-  td.innerHTML = "a" + id;
+  td.innerHTML = "A" + id;
   // title column
   td = tr.insertCell();
   td.className = "title";
@@ -364,8 +364,10 @@ function setScene( asolidSceneData ) {
   /// or it may be selectedRow.dataset.
   // Either one should have these properties, all in lower case
   const { field, edgescene, facescene, zometool } = asolidSceneData;
-  const scene = (showAnyEdges || (field == "Golden" && zometool == "true")) && showEdges.checked ? edgescene : facescene;
-  zomeSwitch.className = (showAnyEdges || (zometool == "true")) ? 'zome' : 'no-zome';
+  const isSnub = field.toLowerCase().startsWith("snub");
+  const scene = (showAnyEdges || isSnub || (field == "Golden" && zometool == "true")) && showEdges.checked ? edgescene : facescene;
+  zomeSwitch.className = (showAnyEdges || isSnub || (zometool == "true")) ? 'zome' : 'no-zome';
+  document.getElementById( "labelForShowEdges" ).textContent = "Show " + (showAnyEdges ? "Edges" : isSnub ? "Chiral Twin" : "Zometool");
   viewer.scene = scene;
   viewer.update({ camera });
 }
