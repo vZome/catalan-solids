@@ -158,6 +158,7 @@ function rescale(modelData) {
 	}
 	var nTriangleEdges = 0;
 	var sumOfLengths = 0;
+	// TODO: deal with the fact that snapshots may be a JavaScript object having keys and values, or it may be an array, depending on the json source
 	for(const snapshot of snapshots) {
 		const ss = modelData.snapshots[snapshot];
 		for(let i = 0; i < ss.length; i++) {
@@ -167,6 +168,9 @@ function rescale(modelData) {
 			if(vertices.length == 3) {
 				// All Johnson solids have at least one equilateral triangle face.
 				// All other polygons are chopped into triangles that are not necessarily equilateral.
+
+				// TODO: THIS IS NOT TRUE FOR 4 OF THE ARCHIMEDIAN SOLIDS SO I NEED A NEW APPROACH!!!
+				
 				// I'll use the average length of all the edges of all the triangular faces
 				// to calculate the rescaling factor.
 				// Note that the edges will be counted twice when two triangles share an edge,
@@ -180,6 +184,12 @@ function rescale(modelData) {
 				sumOfLengths += edgeLength(vertices[2], vertices[0]); nTriangleEdges++;
 			}
 		}
+	}
+
+	if(nTriangleEdges == 0) {
+		console.log("sumOfLengths = " + sumOfLengths + "\tnTriangleEdges = " + nTriangleEdges);
+		alert("Can't rescale solids with no triangle faces.");
+		return modelData; // unchanged
 	}
 	
 	const averageLength = sumOfLengths / nTriangleEdges;
