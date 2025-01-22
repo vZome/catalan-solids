@@ -165,6 +165,7 @@ function rescale(modelData) {
 	var sumOfLengths = 0;
 	var minLength = Number.MAX_VALUE;
 	// TODO: deal with the fact that snapshots may be a JavaScript object having keys and values, or it may be an array, depending on the json source
+	// Try using for ... in on both an object and an array
 	for(const snapshot of snapshots) {
 		const ss = modelData.snapshots[snapshot];
 		for(let i = 0; i < ss.length; i++) {
@@ -293,6 +294,11 @@ function getFaceSceneSnapshots(modelData) {
 	for(const model of models) {
 		if(model.url == url) {
 			facescenes.push(model.facescene);
+			if(model.field.toLowerCase().startsWith("snub")) {
+				// For Archimedean snub fields, 
+				// the edgescene are supposed to have the chiral twin of facescene instead of struts
+				facescenes.push(model.edgescene);
+			}
 		}
 	}
 	const snapshots = [];
