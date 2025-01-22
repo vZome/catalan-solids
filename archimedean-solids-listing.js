@@ -114,7 +114,12 @@ function getDistanceScaledToFitView(modelData) {
 	// Emperically, distance ends up being 
 	// about 12 for J1 which is the smallest solid
 	//   and 48 for J71 which is the biggest solid.
-	return maxRadius * 8; // Scale factor of 8 was determined empirically as a reasonable best-fit.
+	// For the Archimedean Solids, 
+	// A1 (Truncated tetrahedron) is the smallest 
+	// and A11 (Trunceted icosadodecahedron) is the largest
+	maxRadius *= 8; // Scale factor of 8 was determined empirically as a reasonable best-fit.
+	console.log("maxRadius = " + maxRadius);
+	return maxRadius;
 }
 
 function standardizeCamera(camera, distance) {
@@ -158,42 +163,56 @@ function rescale(modelData) {
 	}
 	var nTriangleEdges = 0;
 	var sumOfLengths = 0;
+	var minLength = Number.MAX_VALUE;
 	// TODO: deal with the fact that snapshots may be a JavaScript object having keys and values, or it may be an array, depending on the json source
 	for(const snapshot of snapshots) {
 		const ss = modelData.snapshots[snapshot];
 		for(let i = 0; i < ss.length; i++) {
 			const item = ss[i];
 			const shapeGuid = item.shape;
-			const vertices = shapeMap.get(shapeGuid).vertices;
-			if(vertices.length == 3) {
-				// All Johnson solids have at least one equilateral triangle face.
-				// All other polygons are chopped into triangles that are not necessarily equilateral.
+			const shape = shapeMap.get(shapeGuid);
+			if(typeof shape.name === 'undefined') {
+				// shape is a panel, not a ball or a strut which both have a name property
+				const vertices = shape.vertices;
+				console.log("vertices.length = " + vertices.length);
+				minLength = Math.min(minLength, edgeLength(vertices[0], vertices[vertices.length-1]));
+				for(let v = 1; v < vertices.length; v++) {
+					minLength = Math.min( minLength, edgeLength(vertices[v-1], vertices[v]) );
+					console.log("minLength = " + minLength);
+				}			
+				if(vertices.length == 3) {
+					// All Johnson solids have at least one equilateral triangle face.
+					// All other polygons are chopped into triangles that are not necessarily equilateral.
 
-				// TODO: THIS IS NOT TRUE FOR 4 OF THE ARCHIMEDIAN SOLIDS SO I NEED A NEW APPROACH!!!
-				
-				// I'll use the average length of all the edges of all the triangular faces
-				// to calculate the rescaling factor.
-				// Note that the edges will be counted twice when two triangles share an edge,
-				// and other triangle edges will only be counted once when a triangle shares
-				// an edge with a larger polygon such as a square.
-				// It's not worth the effort to distinguish the two cases for this application.
-				// In fact, it would work well enough by just using the first equilateral triangle 
-				// edge length that we encounter.
-				sumOfLengths += edgeLength(vertices[0], vertices[1]); nTriangleEdges++;
-				sumOfLengths += edgeLength(vertices[1], vertices[2]); nTriangleEdges++;
-				sumOfLengths += edgeLength(vertices[2], vertices[0]); nTriangleEdges++;
+					// TODO: THIS IS NOT TRUE FOR 4 OF THE ARCHIMEDIAN SOLIDS SO I NEED A NEW APPROACH!!!
+					
+					// I'll use the average length of all the edges of all the triangular faces
+					// to calculate the rescaling factor.
+					// Note that the edges will be counted twice when two triangles share an edge,
+					// and other triangle edges will only be counted once when a triangle shares
+					// an edge with a larger polygon such as a square.
+					// It's not worth the effort to distinguish the two cases for this application.
+					// In fact, it would work well enough by just using the first equilateral triangle 
+					// edge length that we encounter.
+					sumOfLengths += edgeLength(vertices[0], vertices[1]); nTriangleEdges++;
+					sumOfLengths += edgeLength(vertices[1], vertices[2]); nTriangleEdges++;
+					sumOfLengths += edgeLength(vertices[2], vertices[0]); nTriangleEdges++;
+				}
 			}
 		}
 	}
 
-	if(nTriangleEdges == 0) {
-		console.log("sumOfLengths = " + sumOfLengths + "\tnTriangleEdges = " + nTriangleEdges);
-		alert("Can't rescale solids with no triangle faces.");
-		return modelData; // unchanged
-	}
-	
-	const averageLength = sumOfLengths / nTriangleEdges;
-	console.log("averageLength = " + averageLength + "  (Ideal length = 2.0.)");
+	//console.log("minLength = " + minLength);
+
+	const averageLength = minLength;
+//	if(nTriangleEdges == 0) {
+//		console.log("sumOfLengths = " + sumOfLengths + "\tnTriangleEdges = " + nTriangleEdges);
+//		//alert("Can't rescale solids with no triangle faces.");
+//		// modelData; // unchanged
+//	} else {
+//		averageLength = sumOfLengths / nTriangleEdges;
+//		console.log("averageLength = " + averageLength + "  (Ideal length = 2.0.)");
+//	}
 	
 	// Many models have an averageLength of 8.472135952064994 = (2+4phi) corresponding to blue zometool lengths.
 	// The target edge length will be 2 because most of the coordinates on qfbox and wikipedia
