@@ -59,8 +59,16 @@ function downloadShapesJson() {
 }
 
 function postProcess(modelData) {
-	if(modelData.polygons != "true") {
-		alert("Model data is not in polygon JSON format. Post processing will be skipped.");
+	// desktop has no 'polygons'property for multi-triangle formatted panels
+	// desktop saves 'polygons' as a string: "true" for polygon formatted panels
+	// online  saves 'polygons' as a boolean: true
+	// this should handle any of these cases
+	// although some of the subsequent scene processing will fail since online json format is very different, 
+	// so bail out here for anything except desktop polygon format 
+	// even though some of the code to handle online is here and all of it except standardizeCameras() is working.
+	console.log("Model format = " + modelData.format);
+	if(modelData.format = "online" || ("" + modelData.polygons) != "true") {
+		alert("Model data is not in desktop polygon JSON format. Post processing will be skipped.\n\nJSON format = " + modelData.format);
 	} else {
 		recolor(modelData);
 		rescale(modelData);
@@ -78,7 +86,8 @@ function standardizeCameras(modelData) {
 	standardizeCamera(modelData.camera, distance);
 	for(let scene of modelData.scenes) {
 		// scene views are not used by the Johnson solids app, but we'll standardize their cameras too since we're here
-		standardizeCamera(scene.view, distance);
+		// online json uses scene.camera where desktop json uses scene.view for basically the same object
+		standardizeCamera(modelData.format == "online" ? scene.camera : scene.view, distance);
 	}
 	return modelData;
 }
@@ -92,8 +101,19 @@ function cameraFieldOfViewY ( width, distance ) {
 function getDistanceScaledToFitView(modelData) {
 	const snapshots = getFaceSceneSnapshots(modelData);
 	const shapeMap = new Map();
-	for(const shape of modelData.shapes) {
-		shapeMap.set(shape.id, shape);
+	if(Array.isArray(modelData.shapes)) {
+		// modelData.shapes is an array when the json generated in desktop.
+		for(const shape of modelData.shapes) {
+			shapeMap.set(shape.id, shape);
+		}
+	} else {
+		// modelData.shapes is a collection of properties with guids for names if generated online.
+		// TODO: Will this work on an array?
+		for (const [id, shape] of Object.entries(modelData.shapes)) {
+			if(shape.id == id) { // should always be true, but will this work on an array?
+				shapeMap.set(shape.id, shape);
+			}
+		}
 	}
 	const origin = {x:0, y:0, z:0};
 	var maxRadius = 0;
@@ -101,7 +121,7 @@ function getDistanceScaledToFitView(modelData) {
 		const ss = modelData.snapshots[snapshot];
 		for(let i = 0; i < ss.length; i++) {
 			const item = ss[i];
-			const shapeGuid = item.shape;
+			const shapeGuid = typeof item.shapeId === 'undefined' ? item.shape : item.shapeId; // online vs desktop
 			const vertices = shapeMap.get(shapeGuid).vertices;
 			for(const vertex of vertices) {
 				maxRadius = Math.max( maxRadius, edgeLength(origin, vertex) );
@@ -158,9 +178,21 @@ function standardizeCamera(camera, distance) {
 function rescale(modelData) {
 	const snapshots = getFaceSceneSnapshots(modelData);
 	const shapeMap = new Map();
-	for(const shape of modelData.shapes) {
-		shapeMap.set(shape.id, shape);
+	if(Array.isArray(modelData.shapes)) {
+		// modelData.shapes is an array when the json generated in desktop.
+		for(const shape of modelData.shapes) {
+			shapeMap.set(shape.id, shape);
+		}
+	} else {
+		// modelData.shapes is a collection of properties with guids for names if generated online.
+		// TODO: Will this work on an array?
+		for (const [id, shape] of Object.entries(modelData.shapes)) {
+			if(shape.id == id) { // should always be true, but will this work on an array?
+				shapeMap.set(shape.id, shape);
+			}
+		}
 	}
+
 	var nTriangleEdges = 0;
 	var sumOfLengths = 0;
 	var minLength = Number.MAX_VALUE;
@@ -170,16 +202,15 @@ function rescale(modelData) {
 		const ss = modelData.snapshots[snapshot];
 		for(let i = 0; i < ss.length; i++) {
 			const item = ss[i];
-			const shapeGuid = item.shape;
+			const shapeGuid = typeof item.shapeId === 'undefined' ? item.shape : item.shapeId; // online vs desktop
 			const shape = shapeMap.get(shapeGuid);
-			if(typeof shape.name === 'undefined') {
-				// shape is a panel, not a ball or a strut which both have a name property
+			if(isPanel(shape)) {
 				const vertices = shape.vertices;
-				console.log("vertices.length = " + vertices.length);
+				//console.log("vertices.length = " + vertices.length);
 				minLength = Math.min(minLength, edgeLength(vertices[0], vertices[vertices.length-1]));
 				for(let v = 1; v < vertices.length; v++) {
 					minLength = Math.min( minLength, edgeLength(vertices[v-1], vertices[v]) );
-					console.log("minLength = " + minLength);
+					//console.log("minLength = " + minLength);
 				}			
 				if(vertices.length == 3) {
 					// All Johnson solids have at least one equilateral triangle face.
@@ -222,6 +253,7 @@ function rescale(modelData) {
 	
 	console.log("scaleFactor = " + scaleFactor);
 	if(!!modelData.scaleFactor) {
+		// TODO: Test this earlier and return earlier
 		console.log("Previously calculated scaleFactor of " + modelData.scaleFactor + " will not be modified.");
 	} else {
 		// persist scaleFactor in the json
@@ -265,11 +297,42 @@ function scaleVector(scalar, vector) {
 	// don't need to return the vector because it's passed by reference and updated in situ
 }
 
+function isBall(shape) {
+	return !typeof shape.orbit === 'undefined' && shape.name == 'ball';
+}
+
+function isStrut(shape) {
+	return !typeof shape.orbit === 'undefined';
+}
+
+function isPanel(shape) {
+	return !isBall(shape) && !isStrut(shape);
+	
+}
+
+function addPanelToMap(shape, map) {
+	if(isPanel(shape)) {
+		map.set(shape.id, shape.vertices.length);
+	}
+}
+
 function recolor(modelData) {
+	// TODO: Set background color to a hard coded constant
 	const snapshots = getFaceSceneSnapshots(modelData);
 	const shapeMap = new Map();
-	for(const shape of modelData.shapes) {
-		shapeMap.set(shape.id, shape.vertices.length);
+	if(Array.isArray(modelData.shapes)) {
+		// modelData.shapes is an array when the json generated in desktop.
+		for(const shape of modelData.shapes) {
+			addPanelToMap(shape, shapeMap);
+		}
+	} else {
+		// modelData.shapes is a collection of properties with guids for names if generated online.
+		// TODO: Will this work on an array?
+		for (const [id, shape] of Object.entries(modelData.shapes)) {
+			if(shape.id == id) { // should always be true, but will this work on an array?
+				addPanelToMap(shape, shapeMap);
+			}
+		}
 	}
 	for(const snapshot of snapshots) {
 		const ss = modelData.snapshots[snapshot];
