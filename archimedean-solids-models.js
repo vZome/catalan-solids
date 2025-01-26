@@ -1,5 +1,5 @@
 export const models = [
-  { id:1 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated tetrahedron", url:"uploads/ThynStyx/Golden-Truncated-Tetrahedron-ONLINE.vZome"},
+  { id:1 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated tetrahedron", url:"uploads/david-hall/Truncated-Tetrahedron.vZome"},
   { id:2 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Cuboctahedron", url:"uploads/david-hall/Cuboctahedron.vZome"},
   { id:3 , field:"Root2", edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Truncated cube", url:"uploads/ThynStyx/Root2-Truncated-Cube-ONLINE.vZome"},
   { id:4 , field:"Golden", edgescene:"Edges", facescene:"Faces", zometool:"true", title:"Truncated octahedron", url:"uploads/david-hall/Truncated-Octahedron.vZome"},
