@@ -67,7 +67,7 @@ function postProcess(modelData) {
 	// so bail out here for anything except desktop polygon format 
 	// even though some of the code to handle online is here and all of it except standardizeCameras() is working.
 	console.log("Model format = " + modelData.format);
-	if(modelData.format = "online" || ("" + modelData.polygons) != "true") {
+	if(modelData.format == "online" || ("" + modelData.polygons) != "true") {
 		alert("Model data is not in desktop polygon JSON format. Post processing will be skipped.\n\nJSON format = " + modelData.format);
 	} else {
 		recolor(modelData);
