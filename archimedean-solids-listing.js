@@ -416,7 +416,6 @@ showEdges.addEventListener("change", // use "change" for a checkbox, not "click"
 showChiralTwin.addEventListener("click", // use "click" for a button, not "change"
   () => {
 	whichChiralTwin = !whichChiralTwin;
-	console.log("whichChiralTwin = " + whichChiralTwin);
     setScene(selectedRow.dataset);
   } );
 
