@@ -79,8 +79,29 @@ html, body {
   margin-inline-start: 8px;
 }
 
+/* I'm trying to match the built-in corner__icon style of the viewer, but this has no apparent effect */
+/* 
+    I want the transparent background-color to be applied to the parent div only,
+    not the checkbox or button, because the opacity of the div adds to that of the controls.
+    In any case, I can't get the hover style to work in either one, even though the background looks right. 
+    See https://stackoverflow.com/questions/4411306/transition-of-background-color
+*/
+#showEdges, #showChiralTwin {
+  //background-color: rgba(122, 122, 122, 0.3); /* match the built-in corner__icon style of the viewer */
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+}
+
+/* I'm trying to match the built-in corner__icon style of the viewer, but this has no apparent effect */
+#showEdges.hover, #showChiralTwin.hover {
+   background-color: rgba(122, 122, 122, 0.7);
+}
+
 #zome-switch, #snub-switch {
-  background-color: rgba(122, 122, 122, 0.3); /* match the built-in download and resize controls of the viewer */
+  background-color: rgba(122, 122, 122, 0.3); /* match the built-in corner__icon style of the viewer */
   border-radius: 24px;
   padding: 0.4rem;
   cursor: default; /* disable the "I-beam" text cursor */
