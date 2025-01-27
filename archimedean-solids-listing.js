@@ -408,12 +408,15 @@ const initialRow = tbody.rows[ initialId - 1 ];
 selectArchimedeanSolid( models[ initialId - 1 ], initialRow );
 initialRow.scrollIntoView({ behavior: "smooth", block: "center" });
 
-showEdges.addEventListener("change", // use "change" for a checkbox, not "click"
+showEdges.addEventListener("change", // use "change" rather than "click" for a checkbox
   () => {
     setScene(selectedRow.dataset);
   } );
 
-showChiralTwin.addEventListener("click", // use "click" for a button, not "change"
+// Add the handler to snubSwitch (the parent div) rather than showChiralTwin (the button itself)
+// so that the user can click anywhere on the div when the background color changes, not just on the button.
+// This isn't necessary on the showEdges checkbox
+snubSwitch.addEventListener("click", // use "click" rather han "change" for a button or a div
   () => {
 	whichChiralTwin = !whichChiralTwin;
     setScene(selectedRow.dataset);
