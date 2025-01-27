@@ -66,7 +66,7 @@
     <Tool id="tool-0" label="Edges" selectInputs="true" deleteInputs="false" copyColors="true"/>
     <Tool id="tool-1" label="Faces" selectInputs="true" deleteInputs="false" copyColors="true"/>
   </Tools>
-  <sceneModel ambientLight="51,51,51" background="140,194,231">
+  <sceneModel ambientLight="51,51,51" background="175,200,220">
     <directionalLight color="253,253,253" x="1" y="-1" z="-0.3"/>
     <directionalLight color="181,181,181" x="-1" y="0" z="-0.2"/>
     <directionalLight color="48,48,48" x="0" y="0" z="-1"/>

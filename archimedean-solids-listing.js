@@ -14,6 +14,8 @@ const snubSwitch = document.getElementById( "snub-switch" );
 const downloadLink = document.getElementById( "download" );
 const sigfig = 1000000000; // significant digits for rounding
 
+const fixedBackgroundColor = "#AFC8DC";
+
 const shapeColors = new Map();
 shapeColors.set( 3, "#F0A000"); // yellow strut
 shapeColors.set( 4, "#007695"); // blue strut
@@ -320,7 +322,8 @@ function addPanelToMap(shape, map) {
 }
 
 function recolor(modelData) {
-	// TODO: Set background color to a hard coded constant
+	// Set background color to a hard coded constant
+	modelData.lights.backgroundColor = fixedBackgroundColor;
 	const snapshots = getFaceSceneSnapshots(modelData);
 	const shapeMap = new Map();
 	if(Array.isArray(modelData.shapes)) {
