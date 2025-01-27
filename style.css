@@ -79,13 +79,30 @@ html, body {
   margin-inline-start: 8px;
 }
 
-#zome-switch {
+#zome-switch, #snub-switch {
+  border-radius: 24px;
+  padding: 0.4rem;
   cursor: default; /* disable the "I-beam" text cursor */
   position: absolute;
   z-index: 300;
   top: 1.5rem;
   right: 1.5rem;
   font-size: 14px; /* Same as perspective switch, even though it's hidden */
+}
+
+/* Match the built-in corner__icon style of the viewer */
+#zome-switch, #snub-switch {
+  background-color: rgba(122, 122, 122, 0.3); 
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+}
+
+/* Match the built-in corner__icon style of the viewer */
+#zome-switch:hover, #snub-switch:hover {
+   background-color: rgba(122, 122, 122, 0.7);
 }
 
 input[type=checkbox]
@@ -100,20 +117,20 @@ input[type=checkbox]
   padding: 2px;
 }
 
-#showEdges {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+#showEdges, #showChiralTwin {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
 }
 
 #download {
   display: none;
 }
 
-.no-zome {
+.no-zome, .no-snub {
   display: none;
 }
 
-.zome {
+.zome, snub {
   display: flex;
 }
 
