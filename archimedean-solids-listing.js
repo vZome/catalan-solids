@@ -1,13 +1,16 @@
 import { models } from './archimedean-solids-models.js';
 
 let camera = true;
+let whichChiralTwin = false;
 let selectedRow;
 const searchParams = new URL(document.location).searchParams;
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
 const viewer = document.getElementById( "viewer" );
 const showEdges = document.getElementById( "showEdges" );
+const showChiralTwin = document.getElementById( "showChiralTwin" );
 const zomeSwitch = document.getElementById( "zome-switch" );
+const snubSwitch = document.getElementById( "snub-switch" );
 const downloadLink = document.getElementById( "download" );
 const sigfig = 1000000000; // significant digits for rounding
 
@@ -402,8 +405,15 @@ const initialRow = tbody.rows[ initialId - 1 ];
 selectArchimedeanSolid( models[ initialId - 1 ], initialRow );
 initialRow.scrollIntoView({ behavior: "smooth", block: "center" });
 
-showEdges.addEventListener("change", // use "change" here, not "click"
+showEdges.addEventListener("change", // use "change" for a checkbox, not "click"
   () => {
+    setScene(selectedRow.dataset);
+  } );
+
+showChiralTwin.addEventListener("click", // use "click" for a button, not "change"
+  () => {
+	whichChiralTwin = !whichChiralTwin;
+	console.log("whichChiralTwin = " + whichChiralTwin);
     setScene(selectedRow.dataset);
   } );
 
@@ -467,9 +477,13 @@ function setScene( asolidSceneData ) {
   // Either one should have these properties, all in lower case
   const { field, edgescene, facescene, zometool } = asolidSceneData;
   const isSnub = field.toLowerCase().startsWith("snub");
-  const scene = (showAnyEdges || isSnub || (field == "Golden" && zometool == "true")) && showEdges.checked ? edgescene : facescene;
-  zomeSwitch.className = (showAnyEdges || isSnub || (zometool == "true")) ? 'zome' : 'no-zome';
-  document.getElementById( "labelForShowEdges" ).textContent = "Show " + (showAnyEdges ? "Edges" : isSnub ? "Chiral Twin" : "Zometool");
+  // adjust visibility of the checkbox and button 
+  zomeSwitch.className = !isSnub && (showAnyEdges || (zometool == "true")) ? 'zome' : 'no-zome';
+  snubSwitch.className = isSnub ? 'snub' : 'no-snub';
+	// adjust the scene for golden, snub or neither
+  const scene = isSnub 
+  		? (whichChiralTwin ? edgescene : facescene)
+		: ((field == "Golden" && zometool == "true") || showAnyEdges) && showEdges.checked ? edgescene : facescene;
   viewer.scene = scene;
   viewer.update({ camera });
 }

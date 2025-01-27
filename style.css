@@ -79,7 +79,10 @@ html, body {
   margin-inline-start: 8px;
 }
 
-#zome-switch {
+#zome-switch, #snub-switch {
+  background-color: rgba(122, 122, 122, 0.3); /* match the built-in download and resize controls of the viewer */
+  border-radius: 24px;
+  padding: 0.4rem;
   cursor: default; /* disable the "I-beam" text cursor */
   position: absolute;
   z-index: 300;
@@ -100,20 +103,20 @@ input[type=checkbox]
   padding: 2px;
 }
 
-#showEdges {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+#showEdges, #showChiralTwin {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
 }
 
 #download {
   display: none;
 }
 
-.no-zome {
+.no-zome, .no-snub {
   display: none;
 }
 
-.zome {
+.zome, snub {
   display: flex;
 }
 
