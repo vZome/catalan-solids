@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="71" field="snubCube" version="7.1">
+  <EditHistory editNumber="122" lastStickyEdit="-1">
+    <StrutCreation anchor="0 0 0 0 0 0 0 0 0" dir="snubVertex" index="16" len="1 1 1" symm="octahedral"/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 -1 0 -1 0 1 1 1"/>
+    <DeselectAll/>
+    <EndBlock/>
+    <StrutCreation anchor="0 0 0 0 0 0 0 0 0" dir="snubFaceNormal" index="15" len="1 2 0" sense="minus" symm="octahedral"/>
+    <BeginBlock/>
+    <SelectManifestation endSegment="1 2 0 1 0 0 0 0 1" startSegment="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="1 2 0 1 0 0 0 0 1"/>
+    <SelectManifestation endSegment="0 0 -1 0 -1 0 1 1 1" startSegment="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 -1 0 -1 0 1 1 1"/>
+    <EndBlock/>
+    <Delete/>
+    <StrutCreation anchor="0 0 0 0 0 0 0 0 0" dir="snubVertex" index="16" len="2 3 4" symm="octahedral"/>
+    <SelectManifestation point="-1 -2 -2 -1 -1 -1 2 3 4"/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <ConvexHull3d mode="noPanels"/>
+    <Midpoint/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0"/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-1 -3/2 -3/2 0 1/2 1/2 2 3 4"/>
+    <SelectManifestation point="-1 -1 -1 1 2 2 2 3 4"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-1 -3/2 -3/2 0 1/2 1/2 2 3 4"/>
+    <SelectManifestation point="-1 -2 -2 -1 -1 -1 2 3 4"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-1/4 -1/4 0 -1/4 1/4 0 9/4 7/2 19/4" startSegment="-1 -3/2 -3/2 0 1/2 1/2 2 3 4"/>
+    <SelectManifestation endSegment="-7/4 -11/4 -3 1/4 3/4 1 7/4 5/2 13/4" startSegment="-1 -3/2 -3/2 0 1/2 1/2 2 3 4"/>
+    <SelectManifestation point="-7/4 -11/4 -3 1/4 3/4 1 7/4 5/2 13/4"/>
+    <SelectManifestation point="-1/4 -1/4 0 -1/4 1/4 0 9/4 7/2 19/4"/>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-3/2 -2 -5/2 1 3/2 3/2 3/2 5/2 3"/>
+    <SelectManifestation point="-1 -1 -1 1 2 2 2 3 4"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-3/2 -2 -5/2 7/4 11/4 3 1 7/4 9/4" startSegment="-3/2 -2 -5/2 1 3/2 3/2 3/2 5/2 3"/>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-3/2 -2 -5/2 1 3/2 3/2 3/2 5/2 3"/>
+    <SelectManifestation point="-2 -3 -4 1 1 1 1 2 2"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="1/4 3/4 1 7/4 11/4 3 7/4 5/2 13/4" startSegment="0 1/2 1/2 1 3/2 3/2 2 3 4"/>
+    <SelectManifestation endSegment="1/4 1/4 0 3/2 2 5/2 2 13/4 15/4" startSegment="1 3/2 3/2 3/2 2 5/2 3/2 5/2 3"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-1/4 1/4 0 1/4 1/4 0 9/4 7/2 19/4" startSegment="0 1/2 1/2 1 3/2 3/2 2 3 4"/>
+    <SelectManifestation endSegment="1/4 -1/4 0 -1/4 -1/4 0 9/4 7/2 19/4" startSegment="0 -1/2 -1/2 -1 -3/2 -3/2 2 3 4"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-3/2 -2 -5/2 1/4 1/4 0 2 13/4 15/4" startSegment="-3/2 -2 -5/2 1 3/2 3/2 3/2 5/2 3"/>
+    <SelectManifestation endSegment="-7/4 -11/4 -3 1/4 3/4 1 7/4 5/2 13/4" startSegment="-1 -3/2 -3/2 0 1/2 1/2 2 3 4"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-1/4 -3/4 -1 7/4 5/2 13/4 7/4 11/4 3" startSegment="0 -1/2 -1/2 2 3 4 1 3/2 3/2"/>
+    <SelectManifestation endSegment="-1/4 -1/4 0 2 13/4 15/4 3/2 2 5/2" startSegment="-1 -3/2 -3/2 3/2 5/2 3 3/2 2 5/2"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-3/2 -2 -5/2 7/4 11/4 3 1 7/4 9/4" startSegment="-3/2 -2 -5/2 1 3/2 3/2 3/2 5/2 3"/>
+    <SelectManifestation endSegment="-7/4 -11/4 -3 1 7/4 9/4 3/2 2 5/2" startSegment="-1 -3/2 -3/2 3/2 5/2 3 3/2 2 5/2"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="-1/2 -1 -1/2 3/2 3 7/2 3/2 2 5/2"/>
+    <SelectManifestation point="-3/2 -2 -5/2 3/2 2 5/2 3/2 2 5/2"/>
+    <SelectManifestation point="1/2 1 1/2 3/2 2 5/2 3/2 3 7/2"/>
+    <SelectManifestation point="0 0 0 0 0 0 5/2 4 9/2"/>
+    <SelectManifestation point="-3/2 -2 -5/2 1/2 1 1/2 3/2 3 7/2"/>
+    <DeselectAll/>
+    <SelectManifestation point="-3/2 -2 -5/2 3/2 2 5/2 3/2 2 5/2"/>
+    <SelectManifestation point="-1/2 -1 -1/2 3/2 3 7/2 3/2 2 5/2"/>
+    <SelectManifestation point="1/2 1 1/2 3/2 2 5/2 3/2 3 7/2"/>
+    <SelectManifestation point="0 0 0 0 0 0 5/2 4 9/2"/>
+    <SelectManifestation point="-3/2 -2 -5/2 1/2 1 1/2 3/2 3 7/2"/>
+    <EndBlock/>
+    <Polygon/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="-3/2 -2 -5/2 3/2 2 5/2 3/2 2 5/2"/>
+      <polygonVertex at="-1/2 -1 -1/2 3/2 3 7/2 3/2 2 5/2"/>
+      <polygonVertex at="1/2 1 1/2 3/2 2 5/2 3/2 3 7/2"/>
+      <polygonVertex at="0 0 0 0 0 0 5/2 4 9/2"/>
+      <polygonVertex at="-3/2 -2 -5/2 1/2 1 1/2 3/2 3 7/2"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="DESELECT" struts="IGNORE"/>
+    <EndBlock/>
+    <Delete/>
+  </EditHistory>
+  <notes/>
+  <sceneModel ambientLight="41,41,41" background="175,200,220">
+    <directionalLight color="235,235,228" x="1.0" y="-1.0" z="-1.0"/>
+    <directionalLight color="228,228,235" x="-1.0" y="0.0" z="0.0"/>
+    <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
+  </sceneModel>
+  <Viewing>
+    <ViewModel distance="175.71783447265625" far="351.4356689453125" near="0.43929457664489746" parallel="false" stereoAngle="0.0" width="79.07301330566406">
+      <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+      <UpDirection x="0.08801214396953583" y="-0.34516721963882446" z="-0.9344045519828796"/>
+      <LookDirection x="0.5620190501213074" y="0.791685938835144" z="-0.2395111471414566"/>
+    </ViewModel>
+  </Viewing>
+  <SymmetrySystem name="octahedral" renderingStyle="disdyakis dodec">
+    <Direction color="57,122,31" name="snubTriangleMid" orbit="[[-1,1,0,1],[1,1,-1,1]]"/>
+    <Direction color="87,188,48" name="snubTriangle" orbit="[[1,2,-1,2],[-1,2,-1,2]]"/>
+    <Direction color="204,204,0" name="snubVertex" orbit="[[-1,-1,1,1],[0,-2,1,1]]"/>
+    <Direction color="0,153,63" name="green" orbit="[[0,0,0,1],[-1,0,0,1]]"/>
+    <Direction color="255,179,26" name="yellow" orbit="[[1,0,0,1],[-1,0,0,1]]"/>
+    <Direction color="0,142,194" name="blue" orbit="[[0,0,0,1],[0,0,0,1]]"/>
+    <Direction color="255,255,255" name="0" orbit="[[1,2,-1,2],[1,2,-1,2]]" prototype="1 -2 1 -1 2 -1 -2 -2 2"/>
+    <Direction color="33,99,166" name="snubSquareMid" orbit="[[-1,1,0,2],[1,3,-2,2]]"/>
+    <Direction color="51,153,255" name="snubSquare" orbit="[[0,2,-1,1],[0,0,0,1]]"/>
+    <Direction color="255,255,255" name="5" orbit="[[-1,-6,4,7],[-5,5,-1,7]]" prototype="4 -2 0 -6 -4 4 4 6 -4"/>
+    <Direction color="178,178,127" name="snubDiagonal" orbit="[[0,-1,1,2],[0,1,-1,2]]"/>
+    <Direction color="255,255,255" name="2" orbit="[[-1,-3,2,2],[2,1,-1,2]]" prototype="2 2 -2 2 -3 1 -1 -3 2"/>
+    <Direction color="255,255,255" name="1" orbit="[[0,0,0,1],[-1,-1,1,1]]" prototype="0 0 0 -1 1 0 0 -1 1"/>
+    <Direction color="255,255,255" name="4" orbit="[[0,2,-1,1],[-1,1,0,1]]" prototype="-1 2 -1 1 -1 0 -1 -3 2"/>
+    <Direction color="216,216,208" name="snubFaceNormal" orbit="[[-2,2,1,7],[1,6,-4,7]]"/>
+    <Direction color="255,255,255" name="3" orbit="[[0,2,-1,1],[2,1,-1,1]]" prototype="1 -2 1 -2 -1 1 0 -1 1"/>
+  </SymmetrySystem>
+  <OtherSymmetries/>
+  <Tools/>
+</vzome:vZome>

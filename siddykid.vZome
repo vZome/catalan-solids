@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="71" field="rootTwo" version="7.1">
+  <EditHistory editNumber="174" lastStickyEdit="-1">
+    <StrutCreation anchor="0 0 0 0 0 0" index="4" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="19" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="1" len="8 0" symm="octahedral"/>
+    <BeginBlock/>
+    <SelectManifestation point="0 4 0 4 0 0"/>
+    <SelectManifestation point="0 0 0 0 8 0"/>
+    <SelectManifestation point="0 0 0 -4 0 -4"/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <DeselectAll/>
+    <EndBlock/>
+    <StrutCreation anchor="0 0 0 0 8 0" dir="green" index="1" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 4 0 4 8 0" index="6" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 4 0 4 0 0" dir="green" index="2" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 8 0 4 0 -4" dir="green" index="19" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 8 0 0 0 -8" dir="green" index="15" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 4 0 -4 0 -8" dir="green" index="12" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 0 -4 0 -4" index="7" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 -8 -4 0 -4" dir="green" index="16" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 -8 -8 0 0" index="4" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 -8 -8 8 0" dir="green" index="17" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 -8 -4 8 4" index="5" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 0 0 -4 8 4" dir="green" index="18" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 8 0 4 0 -4" index="0" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="0 8 0 0 0 -8" index="0" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 8 0 0 0 -8" dir="green" index="17" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 8 0 4 0 -4" dir="green" index="0" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 8 0 0 0 -8" dir="green" index="3" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 12 0 4 0 0" dir="green" index="3" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 16 0 0 0 0" dir="green" index="19" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 16 0 -4 0 -4" dir="green" index="14" len="8 0" symm="octahedral"/>
+    <BeginBlock/>
+    <SelectManifestation point="8 16 0 -4 0 -4"/>
+    <SelectManifestation point="0 0 -8 -4 8 4"/>
+    <DeselectAll/>
+    <EndBlock/>
+    <StrutCreation anchor="8 16 0 -4 0 -4" index="7" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 16 -8 -4 0 -4" dir="green" index="16" len="8 0" symm="octahedral"/>
+    <StrutCreation anchor="8 16 -8 -8 0 0" index="4" len="8 0" symm="octahedral"/>
+    <BeginBlock/>
+    <SelectManifestation point="8 16 -8 -8 8 0"/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="8 16 -8 -8 8 0"/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="8 16 -8 -8 8 0"/>
+    <EndBlock/>
+    <JoinPoints/>
+    <Midpoint/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="4 8 -4 -4 4 0"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <DeselectAll/>
+    <SelectManifestation point="4 8 -4 -4 4 0"/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <SelectManifestation point="4 8 -4 -4 4 0"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <Delete/>
+    <SelectManifestation point="4 8 -4 -4 4 0"/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="mirror.builtin/reflection through XY plane" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <ConvexHull3d mode="noPanels"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <Midpoint/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="4 2 4 2 -4 -8"/>
+    <SelectManifestation point="4 0 4 4 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="8 3 8 3 -2 -6" startSegment="4 2 4 2 -4 -8"/>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="8 3 2 6 -8 -3" startSegment="4 2 4 8 -4 -2"/>
+    <SelectManifestation endSegment="2 6 8 3 -8 -3" startSegment="4 8 4 2 -4 -2"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="4 0 4 6 -4 -6"/>
+    <SelectManifestation point="4 0 4 4 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 4 4 -4 -8"/>
+    <SelectManifestation point="-4 0 4 4 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 8 0 8 0 -8"/>
+    <DeselectAll/>
+    <SelectManifestation point="0 8 0 8 0 -8"/>
+    <EndBlock/>
+    <setItemColor blue="102" green="0" red="102"/>
+    <BeginBlock/>
+    <SelectManifestation endSegment="0 0 6 8 -2 -6" startSegment="0 0 4 4 -4 -8"/>
+    <SelectManifestation endSegment="-2 -2 4 7 -4 -7" startSegment="4 0 4 6 -4 -6"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 24/7 48/7 -24/7 -48/7"/>
+    <EndBlock/>
+    <setItemColor blue="102" green="0" red="102"/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 4 4 -4 -8"/>
+    <SelectManifestation point="4 0 4 4 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="4 2 4 2 -4 -8"/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="4 2 4 2 -4 -8"/>
+    <SelectManifestation point="4 0 4 4 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="4 2 4 2 -4 -8"/>
+    <SelectManifestation point="4 4 4 0 -4 -8"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="0 0 2 0 -6 -10" startSegment="0 0 4 4 -4 -8"/>
+    <SelectManifestation endSegment="0 0 2 0 -6 -10" startSegment="0 0 4 4 -4 -8"/>
+    <SelectManifestation endSegment="0 0 2 0 -6 -10" startSegment="0 0 4 4 -4 -8"/>
+    <SelectManifestation endSegment="0 1 0 1 -6 -10" startSegment="4 2 4 2 -4 -8"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 24/7 48/7 -24/7 -48/7"/>
+    <SelectManifestation point="0 8 0 8 0 -8"/>
+    <EndBlock/>
+    <Polygon/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="0 0 0 0 -48/7 -72/7"/>
+      <polygonVertex at="0 0 24/7 48/7 -24/7 -48/7"/>
+      <polygonVertex at="0 8 0 8 0 -8"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="mirror.builtin/reflection through XY plane" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="DESELECT" struts="IGNORE"/>
+    <EndBlock/>
+    <Delete/>
+  </EditHistory>
+  <notes/>
+  <sceneModel ambientLight="41,41,41" background="175,200,220">
+    <directionalLight color="235,235,228" x="1.0" y="-1.0" z="-1.0"/>
+    <directionalLight color="228,228,235" x="-1.0" y="0.0" z="0.0"/>
+    <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
+  </sceneModel>
+  <Viewing>
+    <ViewModel distance="168.8278350830078" far="337.6555480957031" near="0.4220694899559021" parallel="false" stereoAngle="0.0" width="75.9725112915039">
+      <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+      <UpDirection x="-0.550790011882782" y="-0.1825619786977768" z="-0.8144318461418152"/>
+      <LookDirection x="-0.6670740246772766" y="-0.49017876386642456" z="0.5610113739967346"/>
+    </ViewModel>
+  </Viewing>
+  <SymmetrySystem name="octahedral" renderingStyle="ornate">
+    <Direction color="255,255,255" name="9" orbit="[[4,1,6],[4,1,6]]" prototype="1/4 1/2 1/4 1/2 0 3/4"/>
+    <Direction color="255,255,255" name="29" orbit="[[1,0,1],[-1,1,1]]" prototype="1 0 -1 0 1 -1"/>
+    <Direction color="0,142,194" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
+    <Direction color="255,255,255" name="24" orbit="[[11,1,17],[13,-5,17]]" prototype="-1/4 -3/4 1/4 1/2 -1/4 1/2"/>
+    <Direction color="255,255,255" name="23" orbit="[[1,2,7],[4,1,7]]" prototype="1 0 0 1/2 2 -1/2"/>
+    <Direction color="255,255,255" name="0" orbit="[[0,1,2],[0,1,2]]" prototype="-1 0 0 1 -1 0"/>
+    <Direction color="255,255,255" name="22" orbit="[[-1,1,1],[8,-2,7]]" prototype="1/2 1/4 1/8 1/4 5/8 3/8"/>
+    <Direction color="255,255,255" name="21" orbit="[[16,-3,17],[15,-6,17]]" prototype="1/4 1/2 0 3/8 1/2 5/8"/>
+    <Direction color="255,255,255" name="28" orbit="[[4,-1,14],[4,-1,14]]" prototype="-1/2 -1 0 1/4 0 1/4"/>
+    <Direction color="255,255,255" name="27" orbit="[[1,0,2],[-1,1,2]]" prototype="1/4 3/8 1/2 -1/8 1/2 3/4"/>
+    <Direction color="255,255,255" name="26" orbit="[[-14,12,23],[55,-34,23]]" prototype="0 1/8 -1/2 1/16 3/4 7/16"/>
+    <Direction color="255,255,255" name="25" orbit="[[1,0,1],[3,-2,1]]" prototype="-1/2 -1/2 -1/2 -1/2 1/2 -1/2"/>
+    <Direction color="255,255,255" name="6" orbit="[[11,1,17],[-1,3,17]]" prototype="1/4 3/4 -1/4 0 -1/4 -1/2"/>
+    <Direction color="255,255,255" name="5" orbit="[[2,1,6],[0,1,6]]" prototype="3/8 1/4 3/4 3/8 -1/8 -1/8"/>
+    <Direction color="255,255,255" name="8" orbit="[[7,3,31],[15,2,31]]" prototype="1 1/8 -1/4 -1/8 -1/2 -1/8"/>
+    <Direction color="255,255,255" name="7" orbit="[[13,10,31],[22,5,31]]" prototype="1/2 3/8 1 1/8 3/4 1/4"/>
+    <Direction color="255,255,255" name="2" orbit="[[3,1,7],[-1,2,7]]" prototype="1 1/4 0 1/4 -1/2 -1/4"/>
+    <Direction color="255,255,255" name="20" orbit="[[7,-3,3],[5,-3,3]]" prototype="1 1/8 -3/4 -3/8 -1/2 1/8"/>
+    <Direction color="255,255,255" name="1" orbit="[[-1,1,1],[0,0,1]]" prototype="0 0 -1 -1/2 0 -1/2"/>
+    <Direction color="255,255,255" name="4" orbit="[[3,-2,1],[-1,1,1]]" prototype="-1/4 -1/4 -3/4 -1/2 1/4 0"/>
+    <Direction color="255,255,255" name="3" orbit="[[0,1,2],[2,-1,2]]" prototype="-1/2 -1/4 1/2 1/2 0 1/4"/>
+    <Direction color="0,153,63" name="green" orbit="[[0,0,1],[-1,0,1]]"/>
+    <Direction color="255,255,255" name="19" orbit="[[-7,5,1],[-5,4,1]]" prototype="-1/4 -1/2 3/4 1/2 -1/4 1/4"/>
+    <Direction color="255,255,255" name="18" orbit="[[2,3,7],[1,0,1]]" prototype="1/2 1/4 1/4 1/2 -1/4 -1/2"/>
+    <Direction color="255,179,26" name="yellow" orbit="[[1,0,1],[-1,0,1]]"/>
+    <Direction color="255,255,255" name="13" orbit="[[-3,4,23],[5,1,23]]" prototype="-1 -3/8 0 1/8 -1/4 -1/8"/>
+    <Direction color="255,255,255" name="35" orbit="[[-1,3,17],[-1,3,17]]" prototype="-3/2 -1/4 0 -1/4 0 -1/4"/>
+    <Direction color="255,255,255" name="12" orbit="[[8,-1,31],[1,0,1]]" prototype="1/4 0 -1 -1/8 -1 -1/8"/>
+    <Direction color="255,255,255" name="34" orbit="[[5,6,47],[-6,21,47]]" prototype="1/4 1/8 -3/4 0 -1/4 -7/8"/>
+    <Direction color="255,255,255" name="11" orbit="[[2,1,4],[2,1,4]]" prototype="1/2 1/4 1 0 -1/2 -1/4"/>
+    <Direction color="255,255,255" name="33" orbit="[[7,3,31],[-1,4,31]]" prototype="-1/4 -1 1/4 0 -1/4 -1/4"/>
+    <Direction color="255,255,255" name="10" orbit="[[5,2,17],[5,2,17]]" prototype="1/4 3/4 -1/4 -1/4 1/4 1/4"/>
+    <Direction color="255,255,255" name="32" orbit="[[1,0,1],[2,-1,1]]" prototype="-2 1 -1 0 1 0"/>
+    <Direction color="255,255,255" name="17" orbit="[[5,-3,7],[1,0,1]]" prototype="-1 -1/4 1 1/4 1/2 -1/4"/>
+    <Direction color="255,255,255" name="16" orbit="[[-3,6,7],[2,3,7]]" prototype="3/4 0 1/2 1/4 -1/4 -1/2"/>
+    <Direction color="255,255,255" name="38" orbit="[[3,1,7],[0,0,1]]" prototype="0 0 1 1/4 1/2 1/4"/>
+    <Direction color="255,255,255" name="15" orbit="[[-1,1,1],[-1,1,1]]" prototype="-1 -1/2 0 1/2 0 -1/2"/>
+    <Direction color="255,255,255" name="37" orbit="[[-2,3,14],[-2,3,14]]" prototype="-1/2 -3/4 1/4 0 -1/4 0"/>
+    <Direction color="255,255,255" name="14" orbit="[[2,-1,5],[7,-2,5]]" prototype="0 1/8 -5/8 -5/8 -3/8 -5/8"/>
+    <Direction color="255,255,255" name="36" orbit="[[3,-2,2],[-1,1,2]]" prototype="1/8 1/8 -1/8 0 -3/4 -1/2"/>
+    <Direction color="107,53,26" name="brown" orbit="[[1,0,1],[-2,0,1]]"/>
+    <Direction color="255,255,255" name="31" orbit="[[5,-3,1],[-1,1,1]]" prototype="1/2 0 -1/2 -1/2 1/2 -1"/>
+    <Direction color="255,255,255" name="30" orbit="[[2,-1,2],[-4,3,2]]" prototype="-1/2 1/2 -1/2 0 1 1/2"/>
+  </SymmetrySystem>
+  <OtherSymmetries>
+    <SymmetrySystem name="synestructics" renderingStyle="small octahedra">
+      <Direction color="255,179,26" name="yellow" orbit="[[1,0,1],[-1,0,1]]"/>
+      <Direction color="235,82,0" name="orange" orbit="[[0,0,1],[0,0,1]]"/>
+      <Direction color="255,41,183" name="magenta" orbit="[[0,0,1],[-1,0,1]]"/>
+      <Direction color="107,53,26" name="brown" orbit="[[1,0,1],[-2,0,1]]"/>
+    </SymmetrySystem>
+  </OtherSymmetries>
+  <Tools/>
+</vzome:vZome>
